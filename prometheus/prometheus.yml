@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 30s
+  scrape_timeout: 25s
+scrape_configs:
+ - job_name: incredy_application
+   metrics_path: '/actuator/prometheus'
+   static_configs:
+     - targets: ['172.20.0.1:9081']
+       labels:
+         application: 'Incredy Application'
+    
